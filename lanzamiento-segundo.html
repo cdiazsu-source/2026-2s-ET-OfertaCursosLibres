@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Segundo Lanzamiento — Cursos Libres UIFCE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap site-nav-inner">
+    <a class="brand" href="index.html">UIFCE · Cursos Libres</a>
+    <div class="site-nav-links">
+      <a href="index.html">Inicio</a>
+      <a href="lanzamiento-primer.html">Primer lanzamiento</a>
+      <a href="lanzamiento-segundo.html" aria-current="page">Segundo lanzamiento</a>
+      <a href="lanzamiento-especial.html">Lanzamiento especial</a>
+      <a href="mapa-rutas.html">Mapa de rutas</a>
+    </div>
+  </div>
+</nav>
+
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <p class="eyebrow">Unidad de Informática · Facultad de Ciencias Económicas · Universidad Nacional de Colombia</p>
+    <h1>Segundo lanzamiento — Cursos libres 2026</h1>
+    <p class="masthead-sub">Oferta abierta del <strong>05 de octubre</strong> al <strong>05 de diciembre de 2026</strong>. Consulta horarios, prerrequisitos y monitor/a a cargo de cada curso.</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="stats" aria-label="Resumen de la oferta">
+    <div class="stat">
+      <span class="stat-value">6</span>
+      <span class="stat-label">Cursos abiertos</span>
+    </div>
+    <div class="stat">
+      <span class="stat-value">104</span>
+      <span class="stat-label">Horas totales</span>
+    </div>
+    <div class="stat">
+      <span class="stat-value">52</span>
+      <span class="stat-label">Sesiones programadas</span>
+    </div>
+    <div class="stat">
+      <span class="stat-value">4</span>
+      <span class="stat-label">Áreas académicas</span>
+    </div>
+  </section>
+
+  <section class="toolbar" aria-label="Filtros">
+    <input type="search" id="search" placeholder="Buscar por nombre o código…" aria-label="Buscar curso">
+    <select id="filter-area" aria-label="Filtrar por área">
+      <option value="">Todas las áreas</option>
+      <option value="Análisis de Datos y Business Intelligence">Análisis de Datos y BI</option>
+      <option value="Programación y Ciencia de Datos">Programación y Ciencia de Datos</option>
+      <option value="Sistemas Empresariales y Contables">Sistemas Empresariales y Contables</option>
+      <option value="Base de Datos">Base de Datos</option>
+    </select>
+    <select id="filter-level" aria-label="Filtrar por nivel">
+      <option value="">Todos los niveles</option>
+      <option value="Inicial">Inicial</option>
+      <option value="Intermedio">Intermedio</option>
+      <option value="Avanzado">Avanzado</option>
+    </select>
+    <label class="toggle">
+      <input type="checkbox" id="filter-noprereq">
+      <span>Sin prerrequisitos</span>
+    </label>
+  </section>
+
+  <p class="result-count" id="result-count" role="status"></p>
+
+  <section class="course-grid" id="course-grid" aria-label="Cursos disponibles">
+
+    <article class="course-card" data-area="Análisis de Datos y Business Intelligence" data-level="Intermedio" data-prereq="none" data-search="excel complementario a finanzas virtualizado clef202601">
+      <p class="card-eyebrow"><span class="area-tag area-bi">Análisis de Datos y BI</span><span class="level-tag">Intermedio</span></p>
+      <h2 class="card-title">Excel Complementario a Finanzas</h2>
+      <p class="card-mode">Virtualizado</p>
+      <code class="card-code">CLEF202601</code>
+      <dl class="card-meta">
+        <div><dt>Fechas</dt><dd>05 oct – 31 oct 2026</dd></div>
+        <div><dt>Semanas</dt><dd class="mono">Semana 7 – Semana 10 · 4 activas</dd></div>
+        <div><dt>Sesiones</dt><dd class="mono">5</dd></div>
+        <div><dt>Horas</dt><dd class="mono">10</dd></div>
+        <div><dt>Prerrequisito</dt><dd>Ninguno</dd></div>
+        <div><dt>Monitor/a</dt><dd>Paula Sofia Bocarejo Alberto</dd></div>
+      </dl>
+    </article>
+
+    <article class="course-card" data-area="Sistemas Empresariales y Contables" data-level="Intermedio" data-prereq="none" data-search="integración de áreas de negocio en odoo virtualizado clodooae">
+      <p class="card-eyebrow"><span class="area-tag area-sys">Sistemas Empresariales</span><span class="level-tag">Intermedio</span></p>
+      <h2 class="card-title">Integración de Áreas de Negocio en Odoo</h2>
+      <p class="card-mode">Virtualizado</p>
+      <code class="card-code">CLODOOAE</code>
+      <dl class="card-meta">
+        <div><dt>Fechas</dt><dd>05 oct – 05 dic 2026</dd></div>
+        <div><dt>Semanas</dt><dd class="mono">Semana 7 – Semana 15 · 4 activas</dd></div>
+        <div><dt>Sesiones</dt><dd class="mono">5</dd></div>
+        <div><dt>Horas</dt><dd class="mono">10</dd></div>
+        <div><dt>Prerrequisito</dt><dd>Ninguno</dd></div>
+        <div><dt>Monitor/a</dt><dd>Diego Alejandro Garnica Mamanché</dd></div>
+      </dl>
+    </article>
+
+    <article class="course-card" data-area="Análisis de Datos y Business Intelligence" data-level="Avanzado" data-prereq="Excel Intermedio Virtualizado" data-search="excel macros virtualizado eamacros">
+      <p class="card-eyebrow"><span class="area-tag area-bi">Análisis de Datos y BI</span><span class="level-tag">Avanzado</span></p>
+      <h2 class="card-title">Excel Macros</h2>
+      <p class="card-mode">Virtualizado</p>
+      <code class="card-code">EAMACROS</code>
+      <dl class="card-meta">
+        <div><dt>Fechas</dt><dd>12 oct – 21 nov 2026</dd></div>
+        <div><dt>Semanas</dt><dd class="mono">Semana 8 – Semana 12 · 6 activas</dd></div>
+        <div><dt>Sesiones</dt><dd class="mono">12</dd></div>
+        <div><dt>Horas</dt><dd class="mono">24</dd></div>
+        <div><dt>Prerrequisito</dt><dd>Excel Intermedio Virtualizado</dd></div>
+        <div><dt>Monitor/a</dt><dd>María Fernanda Celis</dd></div>
+      </dl>
+    </article>
+
+    <article class="course-card" data-area="Base de Datos" data-level="Intermedio" data-prereq="none" data-search="introducción a las bases de datos con postgresql clibdsql202602">
+      <p class="card-eyebrow"><span class="area-tag area-db">Base de Datos</span><span class="level-tag">Intermedio</span></p>
+      <h2 class="card-title">Introducción a las Bases de Datos con PostgreSQL</h2>
+      <p class="card-mode">&nbsp;</p>
+      <code class="card-code">CLIBDSQL202602</code>
+      <dl class="card-meta">
+        <div><dt>Fechas</dt><dd>12 oct – 14 nov 2026</dd></div>
+        <div><dt>Semanas</dt><dd class="mono">Semana 8 – Semana 12 · 5 activas</dd></div>
+        <div><dt>Sesiones</dt><dd class="mono">10</dd></div>
+        <div><dt>Horas</dt><dd class="mono">20</dd></div>
+        <div><dt>Prerrequisito</dt><dd>Ninguno</dd></div>
+        <div><dt>Monitor/a</dt><dd>Juan David Delgado Moreno</dd></div>
+      </dl>
+    </article>
+
+    <article class="course-card" data-area="Programación y Ciencia de Datos" data-level="Intermedio" data-prereq="Introducción a la Programación ó a Lógica" data-search="análisis de datos en python cladpy202602">
+      <p class="card-eyebrow"><span class="area-tag area-prog">Programación y Datos</span><span class="level-tag">Intermedio</span></p>
+      <h2 class="card-title">Análisis de Datos en Python</h2>
+      <p class="card-mode">&nbsp;</p>
+      <code class="card-code">CLADPY202602</code>
+      <dl class="card-meta">
+        <div><dt>Fechas</dt><dd>12 oct – 14 nov 2026</dd></div>
+        <div><dt>Semanas</dt><dd class="mono">Semana 8 – Semana 12 · 5 activas</dd></div>
+        <div><dt>Sesiones</dt><dd class="mono">10</dd></div>
+        <div><dt>Horas</dt><dd class="mono">20</dd></div>
+        <div class="meta-stack"><dt>Prerrequisito</dt><dd>Introducción a la Programación ó a Lógica</dd></div>
+        <div><dt>Monitor/a</dt><dd>Jeferson David Anzola Grajales</dd></div>
+      </dl>
+    </article>
+
+    <article class="course-card" data-area="Sistemas Empresariales y Contables" data-level="Inicial" data-prereq="none" data-search="sap clsap202602">
+      <p class="card-eyebrow"><span class="area-tag area-sys">Sistemas Empresariales</span><span class="level-tag">Inicial</span></p>
+      <h2 class="card-title">SAP</h2>
+      <p class="card-mode">Curso especial — no forma parte de las rutas estándar</p>
+      <code class="card-code">CLSAP202602</code>
+      <dl class="card-meta">
+        <div><dt>Fechas</dt><dd>12 oct – 14 nov 2026</dd></div>
+        <div><dt>Semanas</dt><dd class="mono">Semana 8 – Semana 12 · 5 activas</dd></div>
+        <div><dt>Sesiones</dt><dd class="mono">10</dd></div>
+        <div><dt>Horas</dt><dd class="mono">20</dd></div>
+        <div><dt>Prerrequisito</dt><dd>Ninguno</dd></div>
+        <div><dt>Monitor/a</dt><dd>Nicolas Daniel Ramirez Camargo</dd></div>
+      </dl>
+    </article>
+
+  </section>
+
+  <p class="no-results" id="no-results" hidden>Ningún curso coincide con esos filtros. Intenta con otro término o área.</p>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Los cupos son limitados y se asignan por orden de inscripción. Consulta los canales oficiales de la Unidad de Informática de la Facultad de Ciencias Económicas para inscribirte y confirmar el cumplimiento de prerrequisitos. ¿Quieres ver todo el catálogo? Revisa el <a href="mapa-rutas.html">mapa de rutas UIFCE</a>.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
