@@ -127,7 +127,11 @@ html, body {
   justify-content: center;
 }
 
-.badge-circle svg { width: 62px; height: 62px; }
+.badge-circle img {
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+}
 
 /* ============================================================
    Tarjeta central
@@ -141,6 +145,33 @@ html, body {
   align-items: center;
   justify-content: center;
   padding: 16px;
+}
+
+.card-stage {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Uifcito, la mascota de la UIFCE: saluda desde la esquina superior
+   derecha de la tarjeta, como en la ilustración de referencia. */
+.mascot {
+  position: absolute;
+  top: -92px;
+  right: 12px;
+  z-index: 3;
+  width: 60px;
+  height: auto;
+  transform: rotate(-8deg);
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.25));
+}
+
+@media (min-width: 640px) {
+  .mascot {
+    top: -68px;
+    right: 28px;
+    width: 116px;
+  }
 }
 
 .card {
@@ -314,6 +345,18 @@ html, body {
 
 .footer-inner a:hover {
   text-decoration: underline;
+}
+
+/* ============================================================
+   Banner institucional
+   ============================================================ */
+
+.banner-institucional {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 /* ============================================================
