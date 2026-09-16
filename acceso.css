@@ -153,11 +153,14 @@ html, body {
   max-width: 600px;
 }
 
-/* Uifcito, la mascota de la UIFCE: saluda anclado al borde derecho
-   de la pantalla, fuera de la tarjeta, para no tapar información.
-   Solo aparece cuando hay espacio de sobra a los lados (escritorio
-   amplio); en tablet/móvil, donde la tarjeta ocupa casi todo el
-   ancho, se oculta por completo. */
+/* Uifcito, la mascota de la UIFCE: saluda anclada al borde derecho
+   de la franja superior, fuera de la tarjeta, para no tapar
+   información. Se posiciona respecto a .screen (no al viewport),
+   así que se desplaza junto con la página en vez de quedar fija
+   sobre el contenido al hacer scroll. Solo aparece cuando hay
+   espacio de sobra a los lados (escritorio amplio); en
+   tablet/móvil, donde la tarjeta ocupa casi todo el ancho, se
+   oculta por completo. */
 .mascot {
   display: none;
 }
@@ -165,13 +168,13 @@ html, body {
 @media (min-width: 1024px) {
   .mascot {
     display: block;
-    position: fixed;
-    top: 50%;
+    position: absolute;
+    top: 4px;
     right: 28px;
     z-index: 3;
-    width: 120px;
+    width: 110px;
     height: auto;
-    transform: translateY(-50%) rotate(-8deg);
+    transform: rotate(-8deg);
     filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.25));
   }
 }
@@ -179,7 +182,7 @@ html, body {
 @media (min-width: 1280px) {
   .mascot {
     right: 56px;
-    width: 140px;
+    width: 130px;
   }
 }
 
@@ -226,6 +229,158 @@ html, body {
   font-weight: 400;
   line-height: 1.5;
   color: var(--text-body);
+}
+
+/* ============================================================
+   Tarjeta ancha del hub (index) — mismos tokens, más contenido
+   ============================================================ */
+
+.card.hub-card {
+  max-width: 1040px;
+  align-items: stretch;
+  gap: 28px;
+}
+
+.hub-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.stat-tile {
+  background: var(--surface-page);
+  border: 1px solid var(--border-muted);
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-tile .n {
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--brand-olive-deep);
+}
+
+.stat-tile .l {
+  font-size: 13px;
+  color: var(--text-body);
+  opacity: 0.75;
+}
+
+.launch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+}
+
+.launch-card {
+  position: relative;
+  background: var(--surface-page);
+  border: 1px solid var(--border-muted);
+  border-radius: 16px;
+  padding: 18px 18px 18px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+  text-decoration: none;
+  color: var(--text-body);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.launch-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 14px;
+  bottom: 14px;
+  width: 4px;
+  border-radius: 0 4px 4px 0;
+  background: var(--brand-olive);
+}
+
+.launch-card.special::before { background: var(--text-subtitle); }
+.launch-card.map::before     { background: var(--text-title); }
+
+.launch-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--brand-olive);
+  box-shadow: var(--shadow-card);
+}
+
+.launch-card:active {
+  transform: translateY(0) scale(0.99);
+}
+
+.launch-eyebrow {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-body);
+  opacity: 0.6;
+}
+
+.launch-card h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-title);
+  line-height: 1.25;
+}
+
+.launch-dates {
+  margin: -4px 0 0;
+  font-size: 13px;
+  color: var(--text-body);
+  opacity: 0.75;
+}
+
+.launch-stats {
+  display: flex;
+  gap: 18px;
+  margin-top: 2px;
+}
+
+.launch-stats div {
+  display: flex;
+  flex-direction: column;
+}
+
+.launch-stats .n {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--brand-olive-deep);
+}
+
+.launch-stats .l {
+  font-size: 11px;
+  color: var(--text-body);
+  opacity: 0.65;
+}
+
+.launch-cta {
+  margin-top: auto;
+  padding-top: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-subtitle);
+}
+
+@media (max-width: 640px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* ============================================================
