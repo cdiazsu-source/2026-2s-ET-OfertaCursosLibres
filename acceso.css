@@ -45,6 +45,13 @@ html, body {
   line-height: 1.5;
 }
 
+a { color: var(--text-subtitle); }
+
+:focus-visible {
+  outline: 2px solid var(--brand-olive);
+  outline-offset: 2px;
+}
+
 /* ============================================================
    Lienzo de pantalla completa
    ============================================================ */
@@ -150,7 +157,8 @@ html, body {
 .card-stage {
   position: relative;
   width: 100%;
-  max-width: 600px;
+  display: flex;
+  justify-content: center;
 }
 
 /* Uifcito, la mascota de la UIFCE: saluda anclada al borde derecho
@@ -521,6 +529,318 @@ html, body {
   display: block;
   width: 100%;
   height: auto;
+}
+
+/* ============================================================
+   Enlace de regreso
+   ============================================================ */
+
+.back-link {
+  align-self: flex-start;
+  margin: 0;
+  font-size: 13px;
+}
+
+.back-link a {
+  color: var(--text-subtitle);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.back-link a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================================
+   Filtros (páginas de catálogo)
+   ============================================================ */
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+}
+
+.toolbar input[type="search"],
+.toolbar select {
+  font-family: var(--font-brand);
+  font-size: 14px;
+  height: 40px;
+  padding: 0 14px;
+  border: 1px solid var(--border-muted);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--text-body);
+}
+
+.toolbar input[type="search"] {
+  flex: 1 1 220px;
+}
+
+.toolbar select {
+  flex: 0 1 190px;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-body);
+  padding: 0 6px;
+}
+
+.toggle input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--brand-olive);
+}
+
+.result-count {
+  margin: 0;
+  width: 100%;
+  font-size: 13px;
+  color: var(--text-body);
+  opacity: 0.7;
+}
+
+/* ============================================================
+   Cuadrícula de cursos
+   ============================================================ */
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
+.course-card {
+  position: relative;
+  background: var(--surface-page);
+  border: 1px solid var(--border-muted);
+  border-radius: 16px;
+  padding: 18px 18px 18px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+}
+
+.course-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 14px;
+  bottom: 14px;
+  width: 4px;
+  border-radius: 0 4px 4px 0;
+  background: var(--brand-olive);
+}
+
+.course-card[data-area="Programación y Ciencia de Datos"]::before { background: var(--error-1); }
+.course-card[data-area="Sistemas Empresariales y Contables"]::before { background: var(--info-1); }
+.course-card[data-area="Base de Datos"]::before { background: var(--warning-1); }
+
+.card-eyebrow {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.area-tag,
+.level-tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+}
+
+.area-tag {
+  background: var(--brand-olive);
+  color: #fff;
+}
+
+.area-prog { background: var(--error-1); color: #fff; }
+.area-sys  { background: var(--info-1); color: #fff; }
+.area-db   { background: var(--warning-1); color: var(--text-body); }
+
+.level-tag {
+  color: var(--text-body);
+  opacity: 0.75;
+  border-color: var(--border-muted);
+  background: transparent;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-title);
+  line-height: 1.3;
+}
+
+.card-mode {
+  margin: -6px 0 0;
+  font-size: 13px;
+  color: var(--text-body);
+  opacity: 0.65;
+  min-height: 1.1em;
+}
+
+.card-code {
+  align-self: flex-start;
+  font-size: 12px;
+  font-weight: 600;
+  background: transparent;
+  border: 1px solid var(--border-muted);
+  padding: 2px 9px;
+  border-radius: 999px;
+  color: var(--text-body);
+  opacity: 0.8;
+}
+
+.card-meta {
+  margin: 4px 0 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-muted);
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.card-meta > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 13px;
+}
+
+.card-meta dt {
+  color: var(--text-body);
+  opacity: 0.6;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  flex: 0 0 auto;
+  padding-top: 1px;
+}
+
+.card-meta dd {
+  margin: 0;
+  text-align: right;
+  font-weight: 500;
+  color: var(--text-body);
+}
+
+.card-meta dd.mono {
+  font-variant-numeric: tabular-nums;
+}
+
+.card-meta .meta-stack {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.card-meta .meta-stack dd {
+  text-align: left;
+}
+
+.no-results {
+  width: 100%;
+  margin: 0;
+  padding: 24px;
+  text-align: center;
+  color: var(--text-body);
+  opacity: 0.75;
+  background: var(--surface-page);
+  border: 1px solid var(--border-muted);
+  border-radius: 16px;
+}
+
+/* ============================================================
+   Mapa de rutas
+   ============================================================ */
+
+.track-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
+.track {
+  background: var(--surface-page);
+  border: 1px solid var(--border-muted);
+  border-radius: 16px;
+  padding: 16px 18px;
+  text-align: left;
+}
+
+.track-name {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--text-title);
+  margin: 0 0 12px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-muted);
+}
+
+.track-bi    { border-bottom-color: var(--brand-olive); }
+.track-prog  { border-bottom-color: var(--error-1); }
+.track-sys   { border-bottom-color: var(--info-1); }
+.track-db    { border-bottom-color: var(--warning-1); }
+.track-other { border-bottom-color: var(--border-muted); }
+
+.track-levels {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.track-level-label {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-body);
+  opacity: 0.6;
+  margin-bottom: 3px;
+}
+
+.track-level ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.track-level li {
+  font-size: 13px;
+  color: var(--text-body);
+}
+
+.track-empty {
+  opacity: 0.5;
+}
+
+.map-note {
+  margin: 0;
+  width: 100%;
+  font-size: 13px;
+  color: var(--text-body);
+  opacity: 0.75;
+  text-align: left;
 }
 
 /* ============================================================

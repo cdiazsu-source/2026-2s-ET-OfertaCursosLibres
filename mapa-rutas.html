@@ -4,131 +4,165 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mapa de Rutas UIFCE</title>
-<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="acceso.css">
 </head>
 <body>
 
-<nav class="site-nav">
-  <div class="wrap site-nav-inner">
-    <a class="brand" href="index.html">UIFCE · Cursos Libres</a>
-    <div class="site-nav-links">
-      <a href="index.html">Inicio</a>
-      <a href="lanzamiento-primer.html">Primer lanzamiento</a>
-      <a href="lanzamiento-segundo.html">Segundo lanzamiento</a>
-      <a href="lanzamiento-especial.html">Lanzamiento especial</a>
-      <a href="mapa-rutas.html" aria-current="page">Mapa de rutas</a>
+<div class="screen">
+
+  <div class="bg-photo" aria-hidden="true"></div>
+
+  <img class="mascot" src="assets/uifcito.png" alt="Uifcito, la mascota de la UIFCE, saludando">
+
+  <div class="header-zone">
+    <div class="badge-circle">
+      <img src="assets/escudo-unal.png" alt="Escudo de la Universidad Nacional de Colombia">
     </div>
+    <header class="header-curve">
+      <div class="header-curve-inner">
+        <p class="header-kicker">Universidad Nacional de Colombia</p>
+        <p class="header-name">UIFCE · Unidad de Informática de la Facultad de Ciencias Económicas</p>
+      </div>
+    </header>
   </div>
-</nav>
 
-<header class="masthead">
-  <div class="wrap masthead-inner">
-    <p class="eyebrow">Unidad de Informática · Facultad de Ciencias Económicas · Universidad Nacional de Colombia</p>
-    <h1>Mapa de rutas UIFCE</h1>
-    <p class="masthead-sub">Catálogo completo de cursos libres por área y nivel. Puedes tomar cualquier curso sin seguir toda la ruta, siempre que cumplas su prerrequisito.</p>
-  </div>
-</header>
+  <main class="card-wrap">
+    <div class="card-stage">
+      <section class="card hub-card">
 
-<main class="wrap">
+        <p class="back-link"><a href="index.html">← Volver a todos los lanzamientos</a></p>
 
-  <section class="map-page-tracks" aria-label="Rutas de formación">
-    <div class="track-grid">
-
-      <div class="track">
-        <h3 class="track-name track-bi">Análisis de Datos y Business Intelligence</h3>
-        <div class="track-levels">
-          <div class="track-level"><span class="track-level-label">Inicial</span><ul><li>Excel Básico</li></ul></div>
-          <div class="track-level"><span class="track-level-label">Intermedio</span><ul>
-            <li>Excel Intermedio</li>
-            <li>Excel Complementario a Finanzas</li>
-            <li>Inteligencia de Negocios Básicos</li>
-          </ul></div>
-          <div class="track-level"><span class="track-level-label">Avanzado</span><ul>
-            <li>Power BI Avanzado</li>
-            <li>Excel Macros</li>
-            <li>Tableau y Looker Studio</li>
-            <li>Introducción a Power BI</li>
-          </ul></div>
+        <div class="hub-intro">
+          <h1>Mapa de rutas UIFCE</h1>
+          <p class="subtitle">Catálogo completo por área y nivel</p>
+          <p class="body-text">Puedes tomar cualquier curso sin seguir toda la ruta, siempre que cumplas su prerrequisito.</p>
         </div>
-      </div>
 
-      <div class="track">
-        <h3 class="track-name track-prog">Programación y Ciencia de Datos</h3>
-        <div class="track-levels">
-          <div class="track-level"><span class="track-level-label">Inicial</span><ul><li>Introducción a la Lógica de Programación</li></ul></div>
-          <div class="track-level"><span class="track-level-label">Intermedio</span><ul>
-            <li>Introducción a la Programación en Python y R</li>
-            <li>R Estadístico</li>
-            <li>Análisis de Datos en Python</li>
-            <li>Análisis y Manipulación de Datos con Tidyverse en R</li>
-            <li>Marketing en R</li>
-          </ul></div>
-          <div class="track-level"><span class="track-level-label">Avanzado</span><ul>
-            <li>Machine Learning en R</li>
-            <li>Machine Learning en Python</li>
-            <li>Econometría en Python</li>
-            <li>Econometría en R</li>
-          </ul></div>
-        </div>
-      </div>
+        <section class="track-grid" aria-label="Rutas de formación">
 
-      <div class="track">
-        <h3 class="track-name track-sys">Sistemas Empresariales y Contables</h3>
-        <div class="track-levels">
-          <div class="track-level"><span class="track-level-label">Inicial</span><ul><li>Odoo</li></ul></div>
-          <div class="track-level"><span class="track-level-label">Intermedio</span><ul>
-            <li>Siigo</li>
-            <li>Integración de Áreas de Negocio en Odoo</li>
-            <li>World Office</li>
-            <li>Alegra Contable</li>
-          </ul></div>
-          <div class="track-level"><span class="track-level-label">Avanzado</span><ul><li class="track-empty">—</li></ul></div>
-        </div>
-      </div>
+          <div class="track">
+            <h3 class="track-name track-bi">Análisis de Datos y Business Intelligence</h3>
+            <div class="track-levels">
+              <div class="track-level"><span class="track-level-label">Inicial</span><ul><li>Excel Básico</li></ul></div>
+              <div class="track-level"><span class="track-level-label">Intermedio</span><ul>
+                <li>Excel Intermedio</li>
+                <li>Excel Complementario a Finanzas</li>
+                <li>Inteligencia de Negocios Básicos</li>
+              </ul></div>
+              <div class="track-level"><span class="track-level-label">Avanzado</span><ul>
+                <li>Power BI Avanzado</li>
+                <li>Excel Macros</li>
+                <li>Tableau y Looker Studio</li>
+                <li>Introducción a Power BI</li>
+              </ul></div>
+            </div>
+          </div>
 
-      <div class="track">
-        <h3 class="track-name track-db">Base de Datos</h3>
-        <div class="track-levels">
-          <div class="track-level"><span class="track-level-label">Inicial</span><ul><li class="track-empty">—</li></ul></div>
-          <div class="track-level"><span class="track-level-label">Intermedio</span><ul>
-            <li>Introducción a Gestión de Base de Datos con Access</li>
-            <li>Introducción a Bases de Datos en PostgreSQL</li>
-          </ul></div>
-          <div class="track-level"><span class="track-level-label">Avanzado</span><ul><li>Access Avanzado</li></ul></div>
-        </div>
-      </div>
+          <div class="track">
+            <h3 class="track-name track-prog">Programación y Ciencia de Datos</h3>
+            <div class="track-levels">
+              <div class="track-level"><span class="track-level-label">Inicial</span><ul><li>Introducción a la Lógica de Programación</li></ul></div>
+              <div class="track-level"><span class="track-level-label">Intermedio</span><ul>
+                <li>Introducción a la Programación en Python y R</li>
+                <li>R Estadístico</li>
+                <li>Análisis de Datos en Python</li>
+                <li>Análisis y Manipulación de Datos con Tidyverse en R</li>
+                <li>Marketing en R</li>
+              </ul></div>
+              <div class="track-level"><span class="track-level-label">Avanzado</span><ul>
+                <li>Machine Learning en R</li>
+                <li>Machine Learning en Python</li>
+                <li>Econometría en Python</li>
+                <li>Econometría en R</li>
+              </ul></div>
+            </div>
+          </div>
 
-      <div class="track">
-        <h3 class="track-name track-other">Software Estadísticos e Investigación</h3>
-        <div class="track-levels">
-          <div class="track-level"><span class="track-level-label">Inicial</span><ul><li>PSPP</li></ul></div>
-          <div class="track-level"><span class="track-level-label">Intermedio</span><ul>
-            <li>STATA</li>
-            <li>Análisis de Información Cualitativa con NVivo</li>
-          </ul></div>
-          <div class="track-level"><span class="track-level-label">Avanzado</span><ul><li class="track-empty">—</li></ul></div>
-        </div>
-      </div>
+          <div class="track">
+            <h3 class="track-name track-sys">Sistemas Empresariales y Contables</h3>
+            <div class="track-levels">
+              <div class="track-level"><span class="track-level-label">Inicial</span><ul><li>Odoo</li></ul></div>
+              <div class="track-level"><span class="track-level-label">Intermedio</span><ul>
+                <li>Siigo</li>
+                <li>Integración de Áreas de Negocio en Odoo</li>
+                <li>World Office</li>
+                <li>Alegra Contable</li>
+              </ul></div>
+              <div class="track-level"><span class="track-level-label">Avanzado</span><ul><li class="track-empty">—</li></ul></div>
+            </div>
+          </div>
 
-      <div class="track">
-        <h3 class="track-name track-other">Herramientas Académicas</h3>
-        <div class="track-levels">
-          <div class="track-level"><span class="track-level-label">Inicial</span><ul><li>Herramientas Básicas para la Productividad Académica</li></ul></div>
-          <div class="track-level"><span class="track-level-label">Intermedio</span><ul><li>Edición de Documentos en LaTeX</li></ul></div>
-          <div class="track-level"><span class="track-level-label">Avanzado</span><ul><li class="track-empty">—</li></ul></div>
-        </div>
-      </div>
+          <div class="track">
+            <h3 class="track-name track-db">Base de Datos</h3>
+            <div class="track-levels">
+              <div class="track-level"><span class="track-level-label">Inicial</span><ul><li class="track-empty">—</li></ul></div>
+              <div class="track-level"><span class="track-level-label">Intermedio</span><ul>
+                <li>Introducción a Gestión de Base de Datos con Access</li>
+                <li>Introducción a Bases de Datos en PostgreSQL</li>
+              </ul></div>
+              <div class="track-level"><span class="track-level-label">Avanzado</span><ul><li>Access Avanzado</li></ul></div>
+            </div>
+          </div>
 
+          <div class="track">
+            <h3 class="track-name track-other">Software Estadísticos e Investigación</h3>
+            <div class="track-levels">
+              <div class="track-level"><span class="track-level-label">Inicial</span><ul><li>PSPP</li></ul></div>
+              <div class="track-level"><span class="track-level-label">Intermedio</span><ul>
+                <li>STATA</li>
+                <li>Análisis de Información Cualitativa con NVivo</li>
+              </ul></div>
+              <div class="track-level"><span class="track-level-label">Avanzado</span><ul><li class="track-empty">—</li></ul></div>
+            </div>
+          </div>
+
+          <div class="track">
+            <h3 class="track-name track-other">Herramientas Académicas</h3>
+            <div class="track-levels">
+              <div class="track-level"><span class="track-level-label">Inicial</span><ul><li>Herramientas Básicas para la Productividad Académica</li></ul></div>
+              <div class="track-level"><span class="track-level-label">Intermedio</span><ul><li>Edición de Documentos en LaTeX</li></ul></div>
+              <div class="track-level"><span class="track-level-label">Avanzado</span><ul><li class="track-empty">—</li></ul></div>
+            </div>
+          </div>
+
+        </section>
+
+        <p class="map-note">
+          Requisito tipo I: haber aprobado el curso previo. Requisito tipo II: haber aprobado o estar cursando el curso previo.
+          Consulta cada lanzamiento para ver qué cursos de esta ruta están abiertos ahora.
+        </p>
+
+      </section>
     </div>
-  </section>
+  </main>
 
-</main>
+  <footer class="footer-login">
+    <div class="footer-inner">
+      <div>
+        <h3>UIFCE</h3>
+        <p>Unidad de Informática de la Facultad de Ciencias Económicas — Universidad Nacional de Colombia, sede Bogotá.</p>
+      </div>
+      <div>
+        <h3>Explorar</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="lanzamiento-primer.html">Primer lanzamiento</a></li>
+          <li><a href="lanzamiento-segundo.html">Segundo lanzamiento</a></li>
+          <li><a href="lanzamiento-especial.html">Lanzamiento especial</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Aviso</h3>
+        <p>Los cupos de cada lanzamiento son limitados y se asignan por orden de inscripción.</p>
+      </div>
+    </div>
+  </footer>
 
-<footer class="site-footer">
-  <div class="wrap">
-    <p>Requisito tipo I: haber aprobado el curso previo. Requisito tipo II: haber aprobado o estar cursando el curso previo. Consulta cada lanzamiento para ver qué cursos de esta ruta están abiertos ahora.</p>
-  </div>
-</footer>
+  <img class="banner-institucional" src="assets/banner-institucional.svg" alt="UIFCE — Unidad de Informática, Facultad de Ciencias Económicas, Universidad Nacional de Colombia, sede Bogotá">
+
+</div>
 
 </body>
 </html>
