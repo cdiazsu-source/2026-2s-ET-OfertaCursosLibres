@@ -153,24 +153,33 @@ html, body {
   max-width: 600px;
 }
 
-/* Uifcito, la mascota de la UIFCE: saluda desde la esquina superior
-   derecha de la tarjeta, como en la ilustración de referencia. */
+/* Uifcito, la mascota de la UIFCE: saluda anclado al borde derecho
+   de la pantalla, fuera de la tarjeta, para no tapar información.
+   Solo aparece cuando hay espacio de sobra a los lados (escritorio
+   amplio); en tablet/móvil, donde la tarjeta ocupa casi todo el
+   ancho, se oculta por completo. */
 .mascot {
-  position: absolute;
-  top: -92px;
-  right: 12px;
-  z-index: 3;
-  width: 60px;
-  height: auto;
-  transform: rotate(-8deg);
-  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.25));
+  display: none;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 1024px) {
   .mascot {
-    top: -68px;
+    display: block;
+    position: fixed;
+    top: 50%;
     right: 28px;
-    width: 116px;
+    z-index: 3;
+    width: 120px;
+    height: auto;
+    transform: translateY(-50%) rotate(-8deg);
+    filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.25));
+  }
+}
+
+@media (min-width: 1280px) {
+  .mascot {
+    right: 56px;
+    width: 140px;
   }
 }
 
