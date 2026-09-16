@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acceso — Cursos Libres UIFCE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="acceso.css">
+</head>
+<body>
+
+<div class="screen">
+
+  <div class="bg-photo" aria-hidden="true"></div>
+
+  <div class="header-zone">
+    <div class="badge-circle" aria-hidden="true">
+      <!-- Placeholder: sustituir por el escudo oficial de la Universidad
+           Nacional de Colombia (ej. <img src="assets/escudo-unal.svg" alt="">). -->
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M32 6 L54 15 V30 C54 44 44.5 53.5 32 58 C19.5 53.5 10 44 10 30 V15 Z"
+              stroke="#677d29" stroke-width="3" fill="none"/>
+        <path d="M32 16 V44 M22 24 H42 M20 34 H44" stroke="#677d29" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <header class="header-curve">
+      <div class="header-curve-inner">
+        <p class="header-kicker">Universidad Nacional de Colombia</p>
+        <p class="header-name">Facultad de Ciencias Económicas · UIFCE</p>
+      </div>
+    </header>
+  </div>
+
+  <main class="card-wrap">
+    <section class="card">
+      <h1>Cursos libres UIFCE</h1>
+      <p class="subtitle">Unidad de Informática — Facultad de Ciencias Económicas</p>
+      <p class="body-text">
+        Antes de continuar, confirma que autorizas el tratamiento de tus datos personales
+        para gestionar tu inscripción a los cursos libres del semestre 2026-2.
+      </p>
+
+      <div class="consent">
+        <input type="checkbox" id="consent-checkbox">
+        <label for="consent-checkbox">
+          He leído y acepto la <a href="#">Política de Tratamiento de Datos Personales</a>
+          y los <a href="#">Términos de inscripción</a> de la Universidad Nacional de Colombia.
+        </label>
+      </div>
+
+      <button type="button" class="btn-pill" id="continue-btn" disabled>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+        Continuar
+      </button>
+    </section>
+  </main>
+
+  <footer class="footer-login">
+    <div class="footer-inner">
+      <div>
+        <h3>UIFCE</h3>
+        <p>Unidad de Informática, Facultad de Ciencias Económicas — Universidad Nacional de Colombia, sede Bogotá.</p>
+      </div>
+      <div>
+        <h3>Explorar</h3>
+        <ul>
+          <li><a href="index.html">Lanzamientos 2026-2S</a></li>
+          <li><a href="mapa-rutas.html">Mapa de rutas</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Aviso</h3>
+        <p>Los cupos de cada lanzamiento son limitados y se asignan por orden de inscripción.</p>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="acceso.js"></script>
+</body>
+</html>
