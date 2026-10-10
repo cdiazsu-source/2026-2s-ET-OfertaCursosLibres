@@ -983,26 +983,43 @@ a { color: var(--text-subtitle); }
   animation: launch-card-blink 1.6s ease-in-out infinite;
 }
 
-.launch-card.blink .launch-cta {
-  transform-origin: left center;
-  animation: launch-cta-blink 1.6s ease-in-out infinite;
+.launch-card.blink .launch-cta.alt {
+  display: grid;
 }
+
+/* Dos textos que se alternan en la misma posición */
+.launch-cta.alt > span {
+  grid-area: 1 / 1;
+}
+
+.launch-cta.alt .cta-a { animation: cta-text-a 3.2s ease-in-out infinite; }
+.launch-cta.alt .cta-b { animation: cta-text-b 3.2s ease-in-out infinite; }
 
 @keyframes launch-card-blink {
   0%, 100% { box-shadow: 0 0 0 0 rgba(103, 125, 41, 0.6); }
   50%      { box-shadow: 0 0 0 12px rgba(103, 125, 41, 0); }
 }
 
-@keyframes launch-cta-blink {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50%      { opacity: 0.45; transform: scale(1.1); }
+@keyframes cta-text-a {
+  0%, 40%   { opacity: 1; }
+  50%, 90%  { opacity: 0; }
+  100%      { opacity: 1; }
+}
+
+@keyframes cta-text-b {
+  0%, 40%   { opacity: 0; }
+  50%, 90%  { opacity: 1; }
+  100%      { opacity: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .launch-card.blink,
-  .launch-card.blink .launch-cta {
+  .launch-cta.alt .cta-a,
+  .launch-cta.alt .cta-b {
     animation: none;
   }
+
+  .launch-cta.alt .cta-b { display: none; }
 }
 
 
