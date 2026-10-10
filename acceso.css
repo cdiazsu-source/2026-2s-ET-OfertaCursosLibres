@@ -971,30 +971,40 @@ a { color: var(--text-subtitle); }
 /* Tarjeta del aplicativo de cursos libres (titila para llamar la atención) */
 .enroll-card.app-card {
   background: var(--text-subtitle);
-  animation: app-card-blink 1.6s ease-in-out infinite;
 }
 
 .enroll-card.app-card .btn-enroll {
   color: var(--text-subtitle);
-  animation: app-btn-blink 1.6s ease-in-out infinite;
 }
 
-@keyframes app-card-blink {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(0, 94, 111, 0.55); filter: brightness(1); }
-  50%      { box-shadow: 0 0 0 12px rgba(0, 94, 111, 0); filter: brightness(1.22); }
+/* Tarjeta del segundo lanzamiento: titila para llamar la atención */
+.launch-card.blink {
+  border-color: var(--brand-olive);
+  animation: launch-card-blink 1.6s ease-in-out infinite;
 }
 
-@keyframes app-btn-blink {
-  0%, 100% { transform: scale(1); }
-  50%      { transform: scale(1.06); }
+.launch-card.blink .launch-cta {
+  transform-origin: left center;
+  animation: launch-cta-blink 1.6s ease-in-out infinite;
+}
+
+@keyframes launch-card-blink {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(103, 125, 41, 0.6); }
+  50%      { box-shadow: 0 0 0 12px rgba(103, 125, 41, 0); }
+}
+
+@keyframes launch-cta-blink {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: 0.45; transform: scale(1.1); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .enroll-card.app-card,
-  .enroll-card.app-card .btn-enroll {
+  .launch-card.blink,
+  .launch-card.blink .launch-cta {
     animation: none;
   }
 }
+
 
 /* Tarjetas de acción completamente clicables */
 a.enroll-card {
@@ -1050,4 +1060,29 @@ a.enroll-card:focus-visible {
 
 @media (prefers-reduced-motion: reduce) {
   .status-pill.open::before { animation: none; }
+}
+
+/* Botón "Inscribirme ahora": máximo énfasis */
+.enroll-card:not(.app-card) .btn-enroll {
+  height: 52px;
+  padding: 0 34px;
+  font-size: 18px;
+  font-weight: 700;
+  background: var(--warning-2);
+  color: var(--text-title);
+  box-shadow: 0 0 0 4px rgba(242, 191, 46, 0.35), 0 4px 14px rgba(0, 0, 0, 0.3);
+  animation: enroll-btn-pulse 1.8s ease-in-out infinite;
+}
+
+a.enroll-card:not(.app-card):hover .btn-enroll {
+  background: #ffd24d;
+}
+
+@keyframes enroll-btn-pulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.05); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .enroll-card:not(.app-card) .btn-enroll { animation: none; }
 }
