@@ -866,6 +866,7 @@ a { color: var(--text-subtitle); }
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 8px;
 }
 
@@ -886,6 +887,12 @@ a { color: var(--text-subtitle); }
 }
 
 .status-pill.open {
+  background: #fff;
+  color: var(--text-subtitle);
+  border-color: var(--text-subtitle);
+}
+
+.status-pill.done {
   background: #fff;
   color: var(--text-subtitle);
   border-color: var(--text-subtitle);
@@ -1102,4 +1109,40 @@ a.enroll-card:not(.app-card):hover .btn-enroll {
 
 @media (prefers-reduced-motion: reduce) {
   .enroll-card:not(.app-card) .btn-enroll { animation: none; }
+}
+
+/* Prerrequisito con texto alternado (Power BI Avanzado) */
+.alt-text { display: grid; }
+.alt-text > span { grid-area: 1 / 1; }
+.alt-text > span:first-child { animation: cta-text-a 6s ease-in-out infinite; }
+.alt-text > span:last-child  { animation: cta-text-b 6s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .alt-text > span { grid-area: auto; animation: none; opacity: 1; }
+}
+
+/* Resumen de estados en la introducción del hub */
+.status-legend {
+  list-style: none;
+  margin: 12px 0 8px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 24px;
+}
+
+.status-legend li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-title);
+}
+
+.hub-intro .status-legend .status-pill {
+  margin-top: 0;
+  font-size: 12px;
+  padding: 3px 12px;
 }

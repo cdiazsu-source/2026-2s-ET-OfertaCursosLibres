@@ -37,25 +37,36 @@
         <div class="hub-intro">
           <h1>Lanzamiento especial — Cursos libres 2026</h1>
           <p class="subtitle">26 de octubre – 28 de noviembre de 2026</p>
-          <p class="body-text">Ventana adicional de inscripción con cupos extra para quienes no alcanzaron los lanzamientos regulares.</p>
+          <span class="status-pill open">Inscripciones abiertas</span>
+          <p class="body-text">Consulta horarios, prerrequisitos y monitor/a a cargo de cada curso.</p>
         </div>
 
         <section class="stats-grid" aria-label="Resumen de la oferta">
-          <div class="stat-tile"><span class="n">2</span><span class="l">Cursos abiertos</span></div>
-          <div class="stat-tile"><span class="n">40</span><span class="l">Horas totales</span></div>
-          <div class="stat-tile"><span class="n">20</span><span class="l">Sesiones programadas</span></div>
-          <div class="stat-tile"><span class="n">1</span><span class="l">Área académica</span></div>
+          <div class="stat-tile"><span class="n">3</span><span class="l">Cursos abiertos</span></div>
+          <div class="stat-tile"><span class="n">60</span><span class="l">Horas totales</span></div>
+          <div class="stat-tile"><span class="n">30</span><span class="l">Sesiones programadas</span></div>
+          <div class="stat-tile"><span class="n">2</span><span class="l">Áreas académicas</span></div>
         </section>
+
+        <a class="enroll-card" href="https://forms.gle/dj4WrGdUgBkbqDRr7" target="_blank" rel="noopener">
+          <div class="enroll-text">
+            <h3>¿Quieres inscribirte a un curso libre?</h3>
+            <p>Diligencia el formulario de inscripción de la UIFCE. Los cupos son limitados.</p>
+          </div>
+          <span class="btn-enroll">Inscribirme ahora →</span>
+        </a>
 
         <section class="toolbar" aria-label="Filtros">
           <input type="search" id="search" placeholder="Buscar por nombre…" aria-label="Buscar curso">
           <select id="filter-area" aria-label="Filtrar por área">
             <option value="">Todas las áreas</option>
             <option value="Análisis de Datos y Business Intelligence">Análisis de Datos y BI</option>
+            <option value="Programación y Ciencia de Datos">Programación y Ciencia de Datos</option>
           </select>
           <select id="filter-level" aria-label="Filtrar por nivel">
             <option value="">Todos los niveles</option>
             <option value="Inicial">Inicial</option>
+            <option value="Intermedio">Intermedio</option>
             <option value="Avanzado">Avanzado</option>
           </select>
           <label class="toggle">
@@ -83,6 +94,20 @@
             </dl>
           </article>
 
+          <article class="course-card" data-area="Programación y Ciencia de Datos" data-level="Intermedio" data-prereq="none" data-search="introducción a la programación en python y r">
+            <p class="card-eyebrow"><span class="area-tag area-prog">Programación y Datos</span><span class="level-tag">Intermedio</span></p>
+            <h2 class="card-title">Introducción a la Programación en Python y R</h2>
+            <p class="card-mode">&nbsp;</p>
+            <dl class="card-meta">
+              <div><dt>Fechas</dt><dd>26 oct – 28 nov 2026</dd></div>
+              <div><dt>Semanas</dt><dd class="mono">Semana 10 – Semana 14 · 5 activas</dd></div>
+              <div><dt>Sesiones</dt><dd class="mono">10</dd></div>
+              <div><dt>Horas</dt><dd class="mono">20</dd></div>
+              <div><dt>Prerrequisito</dt><dd>Ninguno</dd></div>
+              <div><dt>Monitor/a</dt><dd>Yony Sebastián Chaparro</dd></div>
+            </dl>
+          </article>
+
           <article class="course-card" data-area="Análisis de Datos y Business Intelligence" data-level="Avanzado" data-prereq="Inteligencia de Negocios Básico ó Introducción a Power BI" data-search="power bi avanzado">
             <p class="card-eyebrow"><span class="area-tag">Análisis de Datos y BI</span><span class="level-tag">Avanzado</span></p>
             <h2 class="card-title">Power BI Avanzado</h2>
@@ -93,7 +118,7 @@
               <div><dt>Sesiones</dt><dd class="mono">10</dd></div>
               <div><dt>Horas</dt><dd class="mono">20</dd></div>
               <div><dt>Días por semana</dt><dd class="mono">2</dd></div>
-              <div class="meta-stack"><dt>Prerrequisito</dt><dd>Inteligencia de Negocios Básico ó Introducción a Power BI</dd></div>
+              <div class="meta-stack"><dt>Prerrequisito</dt><dd class="alt-text"><span>Inteligencia de Negocios Básico ó Introducción a Power BI</span><span aria-hidden="true">También puedes realizar una prueba para validar tu prerrequisito</span></dd></div>
               <div><dt>Monitor/a</dt><dd>Angel Stiven Gutierrez Diaz</dd></div>
             </dl>
           </article>
@@ -101,6 +126,14 @@
         </section>
 
         <p class="no-results" id="no-results" hidden>Ningún curso coincide con esos filtros. Intenta con otro término o área.</p>
+
+        <a class="enroll-card app-card" href="https://fce.unal.edu.co/cursos-libres-uifce/" target="_blank" rel="noopener">
+          <div class="enroll-text">
+            <h3>Gestiona y haz seguimiento a tus cursos libres</h3>
+            <p>Ingresa al aplicativo de cursos libres con las credenciales de tu correo electrónico institucional y consulta los cursos que has tomado. <strong>También puedes emitir tu certificado y compartirlo en LinkedIn.</strong></p>
+          </div>
+          <span class="btn-enroll">Ir al aplicativo →</span>
+        </a>
 
       </section>
     </div>

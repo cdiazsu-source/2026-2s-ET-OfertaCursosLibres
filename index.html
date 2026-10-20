@@ -34,15 +34,17 @@
       <div class="hub-intro">
         <h1>Cursos libres UIFCE</h1>
         <p class="subtitle">UIFCE — Unidad de Informática de la Facultad de Ciencias Económicas</p>
-        <p class="body-text">
-          El primer lanzamiento está en curso y el segundo abre pronto. Elige un lanzamiento para ver
-          fechas, sesiones, prerrequisitos y monitor/a de cada curso.
-        </p>
+        <ul class="status-legend" aria-label="Estado de los lanzamientos">
+          <li><span>Lanzamiento especial</span><span class="status-pill open">Inscripciones abiertas</span></li>
+          <li><span>Segundo lanzamiento</span><span class="status-pill live">En curso · Inscripciones cerradas</span></li>
+          <li><span>Primer lanzamiento</span><span class="status-pill done">Finalizado</span></li>
+        </ul>
+        <p class="body-text">Elige un lanzamiento para ver el detalle de sus cursos.</p>
       </div>
 
       <section class="stats-grid" aria-label="Resumen del semestre">
         <div class="stat-tile">
-          <span class="n">10</span>
+          <span class="n">13</span>
           <span class="l">Cursos ofertados</span>
         </div>
         <!-- Temporal: antes "Horas totales" (208) -->
@@ -51,7 +53,7 @@
           <span class="l">Cursos nuevos</span>
         </div>
         <div class="stat-tile">
-          <span class="n">2</span>
+          <span class="n">3</span>
           <span class="l">Lanzamientos</span>
         </div>
         <div class="stat-tile">
@@ -60,7 +62,7 @@
         </div>
       </section>
 
-      <a class="enroll-card" href="https://forms.gle/vDLeweiAX36GD1ck7" target="_blank" rel="noopener">
+      <a class="enroll-card" href="https://forms.gle/dj4WrGdUgBkbqDRr7" target="_blank" rel="noopener">
           <div class="enroll-text">
             <h3>¿Quieres inscribirte a un curso libre?</h3>
             <p>Diligencia el formulario de inscripción de la UIFCE. Los cupos son limitados.</p>
@@ -70,8 +72,20 @@
 
       <section class="launch-grid" aria-label="Lanzamientos disponibles">
 
+        <a class="launch-card special blink" href="lanzamiento-especial.html">
+          <div class="launch-top"><p class="launch-eyebrow">Lanzamiento especial</p><span class="status-pill open">Inscripciones abiertas</span></div>
+          <h3>Cursos libres — cupos adicionales</h3>
+          <p class="launch-dates">26 oct – 28 nov 2026</p>
+          <div class="launch-stats">
+            <div><span class="n">3</span><span class="l">cursos</span></div>
+            <div><span class="n">60</span><span class="l">horas</span></div>
+            <div><span class="n">2</span><span class="l">áreas</span></div>
+          </div>
+          <span class="launch-cta alt"><span class="cta-a">Ver oferta →</span><span class="cta-b" aria-hidden="true">¡Dale click aquí! →</span></span>
+        </a>
+
         <a class="launch-card" href="lanzamiento-primer.html">
-          <div class="launch-top"><p class="launch-eyebrow">Primer lanzamiento</p><span class="status-pill live">En curso</span></div>
+          <div class="launch-top"><p class="launch-eyebrow">Primer lanzamiento</p><span class="status-pill done">Finalizado · en cierre de notas</span></div>
           <h3>Cursos libres — inicio de semestre</h3>
           <p class="launch-dates">14 sep – 24 oct 2026</p>
           <div class="launch-stats">
@@ -82,8 +96,8 @@
           <span class="launch-cta">Ver oferta →</span>
         </a>
 
-        <a class="launch-card blink" href="lanzamiento-segundo.html">
-          <div class="launch-top"><p class="launch-eyebrow">Segundo lanzamiento</p><span class="status-pill open">Inscripciones abiertas</span></div>
+        <a class="launch-card" href="lanzamiento-segundo.html">
+          <div class="launch-top"><p class="launch-eyebrow">Segundo lanzamiento</p><span class="status-pill live">En curso · Inscripciones cerradas</span></div>
           <h3>Cursos libres — mitad de semestre</h3>
           <p class="launch-dates">19 oct – 28 nov 2026</p>
           <div class="launch-stats">
@@ -91,22 +105,8 @@
             <div><span class="n">84</span><span class="l">horas</span></div>
             <div><span class="n">4</span><span class="l">áreas</span></div>
           </div>
-          <span class="launch-cta alt"><span class="cta-a">Ver oferta →</span><span class="cta-b" aria-hidden="true">¡Dale click aquí! →</span></span>
-        </a>
-
-        <!-- Oculto temporalmente: lanzamiento especial
-        <a class="launch-card special" href="lanzamiento-especial.html">
-          <p class="launch-eyebrow">Lanzamiento especial</p>
-          <h3>Cupos adicionales de Business Intelligence</h3>
-          <p class="launch-dates">26 oct – 28 nov 2026</p>
-          <div class="launch-stats">
-            <div><span class="n">2</span><span class="l">cursos</span></div>
-            <div><span class="n">40</span><span class="l">horas</span></div>
-            <div><span class="n">1</span><span class="l">área</span></div>
-          </div>
           <span class="launch-cta">Ver oferta →</span>
         </a>
-        -->
 
         <a class="launch-card map" href="mapa-rutas.html">
           <p class="launch-eyebrow">Referencia</p>
@@ -142,7 +142,7 @@
         <ul>
           <li><a href="lanzamiento-primer.html">Primer lanzamiento</a></li>
           <li><a href="lanzamiento-segundo.html">Segundo lanzamiento</a></li>
-          <!-- <li><a href="lanzamiento-especial.html">Lanzamiento especial</a></li> -->
+          <li><a href="lanzamiento-especial.html">Lanzamiento especial</a></li>
           <li><a href="mapa-rutas.html">Mapa de rutas</a></li>
         </ul>
       </div>
