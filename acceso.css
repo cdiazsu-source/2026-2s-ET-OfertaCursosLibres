@@ -337,8 +337,7 @@ a { color: var(--text-subtitle); }
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--text-body);
-  opacity: 0.6;
+  color: var(--text-title);
 }
 
 .launch-card h3 {
@@ -1146,3 +1145,7 @@ a.enroll-card:not(.app-card):hover .btn-enroll {
   font-size: 12px;
   padding: 3px 12px;
 }
+
+/* Lanzamiento finalizado: tarjeta atenuada */
+.launch-card.past { opacity: 0.7; }
+.launch-card.past:hover { opacity: 1; }
