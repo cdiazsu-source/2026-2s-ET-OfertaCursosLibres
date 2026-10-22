@@ -1149,3 +1149,114 @@ a.enroll-card:not(.app-card):hover .btn-enroll {
 /* Lanzamiento finalizado: tarjeta atenuada */
 .launch-card.past { opacity: 0.7; }
 .launch-card.past:hover { opacity: 1; }
+
+/* Título alternado: mensaje principal (2.8 s) y cada curso con su icono (1.4 s) */
+.title-alt { display: grid; }
+.title-alt > * { grid-area: 1 / 1; align-self: start; }
+.t-course { display: flex; align-items: center; gap: 10px; opacity: 0; }
+.t-icon { flex: none; width: 32px; height: 32px; padding: 5px; border-radius: 50%; background: #fff; border: 1px solid var(--border-muted); object-fit: contain; box-sizing: border-box; }
+.t-course .t-icon + .t-icon { margin-left: -16px; }
+.t-main { animation: t-main 7s ease-in-out infinite; }
+.t-course:nth-child(2) { animation: t-c1 7s ease-in-out infinite; }
+.t-course:nth-child(3) { animation: t-c2 7s ease-in-out infinite; }
+.t-course:nth-child(4) { animation: t-c3 7s ease-in-out infinite; }
+
+@keyframes t-main { 0%, 36% { opacity: 1; } 40%, 98% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes t-c1 { 0%, 38% { opacity: 0; } 42%, 57% { opacity: 1; } 61%, 100% { opacity: 0; } }
+@keyframes t-c2 { 0%, 58% { opacity: 0; } 62%, 77% { opacity: 1; } 81%, 100% { opacity: 0; } }
+@keyframes t-c3 { 0%, 78% { opacity: 0; } 82%, 96% { opacity: 1; } 99%, 100% { opacity: 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .t-main { animation: none; opacity: 1; }
+  .t-course { display: none; animation: none; }
+}
+
+/* Tarjetas de curso clicables hacia el formulario de inscripción (lanzamiento especial) */
+.course-card.enrollable {
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.course-card.enrollable:hover {
+  transform: translateY(-3px);
+  border-color: var(--brand-olive);
+  box-shadow: 0 8px 20px rgba(76, 92, 30, 0.18);
+}
+
+.course-card.enrollable:focus-within {
+  border-color: var(--brand-olive);
+}
+
+.card-enroll {
+  margin-top: auto;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--brand-olive);
+  border-radius: 999px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+
+/* Extiende el área clicable a toda la tarjeta */
+.card-enroll::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+}
+
+.course-card.enrollable:hover .card-enroll {
+  background: var(--brand-olive-deep);
+}
+
+.card-enroll:focus-visible {
+  outline: none;
+}
+
+.card-enroll:focus-visible::after {
+  outline: 3px solid var(--brand-olive-deep);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .course-card.enrollable { transition: none; }
+  .course-card.enrollable:hover { transform: none; }
+}
+
+/* Iconos de cada programa en la tarjeta del curso */
+.card-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.card-icons {
+  flex: none;
+  display: inline-flex;
+}
+
+.card-icons img {
+  width: 44px;
+  height: 44px;
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid var(--border-muted);
+  object-fit: contain;
+}
+
+.card-icons img + img {
+  margin-left: -14px;
+}
+
+.card-desc {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-subtitle);
+}
