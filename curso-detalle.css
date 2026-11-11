@@ -524,3 +524,9 @@
 .cd-monitor-chip a:hover { border-color: #0a66c2; }
 .cd-monitor-chip a:focus-visible { outline: 3px solid #0a66c2; outline-offset: 2px; }
 .cd-monitor-chip img { width: 18px; height: 18px; }
+
+/* Área Base de Datos: acento amarillo con texto oscuro */
+.course-detail.accent-db { --cd-accent: var(--warning-1); }
+.accent-db .cd-sessions,
+.accent-db .cd-avatar { color: var(--text-body); }
+.accent-db .cd-module { color: var(--text-body); }
