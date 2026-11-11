@@ -530,3 +530,44 @@
 .accent-db .cd-sessions,
 .accent-db .cd-avatar { color: var(--text-body); }
 .accent-db .cd-module { color: var(--text-body); }
+
+/* Banner del monitor con Uifcito (la mascota asoma por encima de la tarjeta) */
+.cd-team.banner {
+  position: relative;
+  margin-top: 64px;
+  min-height: 112px;
+  padding: 20px 24px 20px 168px;
+  background: linear-gradient(100deg, color-mix(in srgb, var(--cd-accent, var(--brand-olive)) 18%, #fff), var(--surface-page) 70%);
+  border-color: var(--cd-accent, var(--brand-olive));
+}
+
+.cd-team.banner .cd-mascot {
+  position: absolute;
+  left: 28px;
+  bottom: 0;
+  width: 120px;
+  height: auto;
+  filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.2));
+  pointer-events: none;
+}
+
+@media (max-width: 639px) {
+  .cd-team.banner {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 84px;
+    padding: 76px 18px 18px;
+    text-align: center;
+  }
+  .cd-team.banner .cd-mascot {
+    left: 50%;
+    bottom: auto;
+    top: -76px;
+    width: 108px;
+    transform: translateX(-50%);
+  }
+  .cd-team.banner .cd-team-info { flex-basis: auto; }
+}
+
+/* Área Programación y Ciencia de Datos: acento rojo (el mismo de la tarjeta del curso) */
+.course-detail.accent-prog { --cd-accent: var(--error-1); }
