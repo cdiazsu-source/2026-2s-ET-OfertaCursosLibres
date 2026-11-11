@@ -493,3 +493,34 @@
 @media (max-width: 639px) {
   .cd-linkedin { width: 100%; justify-content: center; }
 }
+
+/* Monitor como chip dentro del hero */
+.cd-monitor-chip {
+  margin: 0;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 6px 8px 6px 14px;
+  background: var(--surface-page);
+  border: 1px solid var(--border-muted);
+  border-radius: 999px;
+  font-size: 13px;
+  color: var(--text-body);
+}
+
+.cd-monitor-chip a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: #fff;
+  border: 1px solid var(--border-muted);
+  border-radius: 50%;
+}
+
+.cd-monitor-chip a:hover { border-color: #0a66c2; }
+.cd-monitor-chip a:focus-visible { outline: 3px solid #0a66c2; outline-offset: 2px; }
+.cd-monitor-chip img { width: 18px; height: 18px; }
