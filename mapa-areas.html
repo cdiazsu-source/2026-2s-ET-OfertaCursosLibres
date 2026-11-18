@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mapa de áreas UIFCE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="acceso.css?v=20261021">
+<link rel="stylesheet" href="mapa-areas.css?v=3">
+</head>
+<body>
+
+<div class="screen">
+
+  <div class="bg-photo" aria-hidden="true"></div>
+
+  <img class="mascot" src="assets/uifcito.png" alt="Uifcito, la mascota de la UIFCE, saludando">
+
+  <div class="header-zone">
+    <div class="badge-circle">
+      <img src="assets/escudo-unal.png" alt="Escudo de la Universidad Nacional de Colombia">
+    </div>
+    <header class="header-curve">
+      <div class="header-curve-inner">
+        <p class="header-kicker">Universidad Nacional de Colombia</p>
+        <p class="header-name">UIFCE · Unidad de Informática de la Facultad de Ciencias Económicas</p>
+      </div>
+    </header>
+  </div>
+
+  <main class="card-wrap">
+    <div class="card-stage">
+      <section class="card hub-card">
+
+        <p class="back-link"><a href="index.html">← Volver a todos los lanzamientos</a></p>
+
+        <div class="hub-intro">
+          <h1>Mapa de áreas UIFCE</h1>
+          <p class="subtitle">Tu camino de cursos, de prerrequisito en prerrequisito</p>
+          <p class="body-text">Sigue el camino de arriba hacia abajo: cada curso se desbloquea con el que lo antecede. Solo aparecen los cursos con prerrequisitos confirmados.</p>
+        </div>
+
+        <!-- ================= Análisis de Datos y BI ================= -->
+        <section class="am-area am-bi" aria-labelledby="a-bi">
+          <h2 id="a-bi" class="am-area-name">Análisis de Datos y Business Intelligence</h2>
+          <div class="am-path">
+            <svg class="am-links" aria-hidden="true"></svg>
+            <div class="am-step">
+              <div class="am-node" id="excel-basico">
+                <span class="am-badge" aria-hidden="true">1</span>
+                <h3 class="am-name">Excel Básico</h3>
+                <p class="am-req"><span>Requiere</span> Sin prerrequisitos</p>
+              </div>
+            </div>
+            <div class="am-step">
+              <div class="am-node" id="excel-intermedio" data-requires="excel-basico">
+                <span class="am-badge" aria-hidden="true">2</span>
+                <h3 class="am-name">Excel Intermedio</h3>
+                <p class="am-req"><span>Requiere</span> Excel Básico</p>
+              </div>
+            </div>
+            <div class="am-step">
+              <div class="am-node pos-l" id="excel-macros" data-requires="excel-intermedio">
+                <span class="am-badge" aria-hidden="true">3</span>
+                <h3 class="am-name">Excel Macros</h3>
+                <p class="am-req"><span>Requiere</span> Excel Intermedio</p>
+              </div>
+              <div class="am-node pos-r" id="intro-power-bi" data-requires="excel-intermedio">
+                <span class="am-badge" aria-hidden="true">3</span>
+                <h3 class="am-name">Introducción a Power BI</h3>
+                <p class="am-req"><span>Requiere</span> Excel Intermedio</p>
+              </div>
+            </div>
+            <div class="am-step">
+              <div class="am-node" id="power-bi-avanzado" data-requires="intro-power-bi">
+                <span class="am-badge" aria-hidden="true">4</span>
+                <h3 class="am-name">Power BI Avanzado</h3>
+                <p class="am-req"><span>Requiere</span> Introducción a Power BI, o Inteligencia de Negocios Básico</p>
+                <p class="am-alt">También puedes realizar una prueba para validar tu prerrequisito.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= Programación y Ciencia de Datos ================= -->
+        <section class="am-area am-prog" aria-labelledby="a-prog">
+          <h2 id="a-prog" class="am-area-name">Programación y Ciencia de Datos</h2>
+          <div class="am-path">
+            <svg class="am-links" aria-hidden="true"></svg>
+            <div class="am-step">
+              <a class="am-node am-link" id="python-r" href="curso-python-r.html">
+                <span class="am-badge" aria-hidden="true">1</span>
+                <h3 class="am-name">Introducción a la Programación en Python y R</h3>
+                <p class="am-req"><span>Requiere</span> Sin prerrequisitos</p>
+                <span class="am-go">Ver curso →</span>
+              </a>
+            </div>
+            <div class="am-step">
+              <a class="am-node am-link pos-l" id="analisis-python" href="curso-analisis-datos-python.html" data-requires="python-r">
+                <span class="am-badge" aria-hidden="true">2</span>
+                <h3 class="am-name">Análisis de Datos en Python</h3>
+                <p class="am-req"><span>Requiere</span> Introducción a la Programación o a Lógica</p>
+                <span class="am-go">Ver curso →</span>
+              </a>
+              <div class="am-node pos-r" id="econometria-python" data-requires="python-r">
+                <span class="am-badge" aria-hidden="true">2</span>
+                <h3 class="am-name">Econometría en Python</h3>
+                <p class="am-req"><span>Requiere</span> Introducción a la Programación o a Lógica, y estar cursando o haber cursado Econometría I</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= Sistemas Empresariales y Contables ================= -->
+        <section class="am-area am-sys" aria-labelledby="a-sys">
+          <h2 id="a-sys" class="am-area-name">Sistemas Empresariales y Contables</h2>
+          <div class="am-path">
+            <svg class="am-links" aria-hidden="true"></svg>
+            <div class="am-step">
+              <div class="am-node pos-l" id="siigo-nube">
+                <span class="am-badge" aria-hidden="true">1</span>
+                <h3 class="am-name">Siigo Nube</h3>
+                <p class="am-req"><span>Requiere</span> Contabilidad de Inversión y Financiación</p>
+              </div>
+              <a class="am-node am-link pos-r" id="sap-basico" href="curso-sap-basico.html">
+                <span class="am-badge" aria-hidden="true">1</span>
+                <h3 class="am-name">SAP Básico</h3>
+                <p class="am-req"><span>Requiere</span> Sin prerrequisitos</p>
+                <p class="am-alt">Curso nuevo, fuera de las rutas estándar.</p>
+                <span class="am-go">Ver curso →</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= Base de Datos ================= -->
+        <section class="am-area am-db" aria-labelledby="a-db">
+          <h2 id="a-db" class="am-area-name">Base de Datos</h2>
+          <div class="am-path">
+            <svg class="am-links" aria-hidden="true"></svg>
+            <div class="am-step">
+              <a class="am-node am-link" id="postgresql" href="curso-postgresql.html">
+                <span class="am-badge" aria-hidden="true">1</span>
+                <h3 class="am-name">Gestión de Bases de Datos en PostgreSQL</h3>
+                <p class="am-req"><span>Requiere</span> Sin prerrequisitos</p>
+                <span class="am-go">Ver curso →</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <p class="map-note">
+          Los cursos de las demás áreas se irán agregando a medida que se confirmen sus prerrequisitos.
+          Mientras tanto, consulta el <a href="mapa-rutas.html">catálogo completo por área y nivel</a>.
+        </p>
+
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer-login">
+    <div class="footer-inner">
+      <div>
+        <h3>UIFCE</h3>
+        <p>Unidad de Informática de la Facultad de Ciencias Económicas — Universidad Nacional de Colombia, sede Bogotá.</p>
+      </div>
+      <div>
+        <h3>Explorar</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="mapa-rutas.html">Mapa de rutas</a></li>
+          <li><a href="lanzamiento-primer.html">Primer lanzamiento</a></li>
+          <li><a href="lanzamiento-segundo.html">Segundo lanzamiento</a></li>
+          <li><a href="lanzamiento-especial.html">Lanzamiento especial</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Aviso</h3>
+        <p>Los cupos de cada lanzamiento son limitados y se asignan por orden de inscripción.</p>
+      </div>
+    </div>
+  </footer>
+
+  <img class="banner-institucional" src="assets/banner-institucional.svg" alt="UIFCE — Unidad de Informática, Facultad de Ciencias Económicas, Universidad Nacional de Colombia, sede Bogotá">
+
+</div>
+
+<script src="mapa-areas.js?v=3"></script>
+</body>
+</html>

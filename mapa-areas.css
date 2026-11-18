@@ -1,0 +1,183 @@
+/* ============================================================
+   Mapa de áreas: sendero de cursos (estaciones unidas por un camino)
+   ============================================================ */
+
+.am-area {
+  --am-accent: var(--brand-olive);
+  --am-on: #fff;
+  --am-dark: #4c5c1e;
+  width: 100%;
+  background: var(--surface-page);
+  border: 1px solid var(--border-muted);
+  border-radius: 16px;
+  padding: 18px 18px 34px;
+  text-align: left;
+}
+
+.am-bi   { --am-accent: var(--brand-olive); --am-dark: #4c5c1e; }
+.am-prog { --am-accent: var(--error-1);     --am-dark: #7a0900; }
+.am-sys  { --am-accent: var(--info-1);      --am-dark: #004a5a; }
+.am-db   { --am-accent: var(--warning-1);   --am-dark: #9a7200; --am-on: var(--text-body); }
+
+.am-area-name {
+  margin: 0 0 26px;
+  padding-bottom: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-title);
+  border-bottom: 3px solid var(--am-accent);
+}
+
+/* Camino */
+
+.am-path {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 84px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.am-links {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.am-links path {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.am-links .am-asphalt { opacity: 0.26; }
+
+.am-links .am-road {
+  stroke: var(--am-accent);
+  stroke-width: 26;
+}
+
+.am-links .am-lane {
+  stroke: #fff;
+  stroke-width: 3;
+  stroke-dasharray: 0.1 10;
+}
+
+/* Filas: 4 columnas; cada curso ocupa 2 (izquierda, centro o derecha) */
+
+.am-step {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.am-node {
+  grid-column: 2 / span 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 0 6px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text-body);
+}
+
+.am-node.pos-l { grid-column: 1 / span 2; }
+.am-node.pos-r { grid-column: 3 / span 2; }
+
+/* Estación */
+
+.am-badge {
+  position: relative;
+  z-index: 2;
+  width: 76px;
+  height: 76px;
+  margin-bottom: 8px;
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--am-on);
+  background: var(--am-accent);
+  border-radius: 50%;
+  box-shadow:
+    0 7px 0 var(--am-dark),
+    0 0 0 8px var(--surface-page),
+    0 0 0 10px color-mix(in srgb, var(--am-accent) 35%, var(--surface-page));
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.am-name {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: var(--text-title);
+}
+
+.am-req {
+  margin: 0;
+  max-width: 230px;
+  font-size: 12.5px;
+  line-height: 1.4;
+}
+
+.am-req span {
+  display: block;
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.6;
+}
+
+.am-alt {
+  margin: 2px 0 0;
+  max-width: 230px;
+  font-size: 12px;
+  line-height: 1.35;
+  opacity: 0.75;
+}
+
+.am-go {
+  margin-top: 2px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-subtitle);
+}
+
+.am-link:hover .am-badge,
+.am-link:focus-visible .am-badge {
+  transform: translateY(-3px);
+  box-shadow:
+    0 10px 0 var(--am-dark),
+    0 0 0 8px var(--surface-page),
+    0 0 0 10px var(--am-accent);
+}
+
+.am-link:hover .am-go,
+.am-link:focus-visible .am-go {
+  text-decoration: underline;
+}
+
+.am-link:focus-visible { outline: none; }
+.am-link:focus-visible .am-name { text-decoration: underline; }
+
+.map-note a {
+  color: var(--text-subtitle);
+  font-weight: 700;
+}
+
+@media (max-width: 560px) {
+  .am-area { padding: 14px 10px 30px; }
+  .am-path { gap: 78px; }
+  .am-badge { width: 64px; height: 64px; font-size: 24px; }
+  .am-name { font-size: 14px; }
+  .am-req, .am-alt { font-size: 12px; }
+  .am-links .am-road { stroke-width: 22; }
+}

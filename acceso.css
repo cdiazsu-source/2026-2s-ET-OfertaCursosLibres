@@ -833,6 +833,33 @@ a { color: var(--text-subtitle); }
   opacity: 0.5;
 }
 
+.btn-map {
+  margin-top: 8px;
+  min-height: 48px;
+  padding: 10px 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background: var(--brand-olive);
+  border-radius: 999px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.btn-map:hover { background: var(--brand-olive-deep); }
+.btn-map:active { transform: scale(0.98); }
+.btn-map:focus-visible { outline: 3px solid var(--brand-olive-deep); outline-offset: 3px; }
+
+@media (max-width: 640px) {
+  .btn-map { width: 100%; }
+}
+
 .map-note {
   margin: 0;
   width: 100%;
